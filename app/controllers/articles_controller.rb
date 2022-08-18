@@ -1,6 +1,10 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
-    render html: "Ini halaman index artikel"
   end
+
+  def show
+    @article = Article.find(params[:id])
+  end
+
 end
